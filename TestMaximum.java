@@ -25,14 +25,27 @@ public class TestMaximum {
 
 		return max;
 	}
+	public String toMax(String x, String y, String z)
+	{
+		String max = x;
+		if(y.compareTo(max)>0)
+			max=y;
+		if(z.compareTo(max)>0)
+			max=z;
+	
+		return max;
+	}
 
 	public static void main(String[] args) {
 		TestMaximum testMaximum = new TestMaximum();
 		Integer a = 40, b = 20, c = 25;
 		Float d=10.0f, e=15.f, f=31.f;
+		String g="200",h="357",i="870";
 		Integer maxInt = testMaximum.toMax(a, b, c);
 		Float maxFloat=testMaximum.toMax(d, e, f);
+		String maxString=testMaximum.toMax(g, h, i);
 		log.info("The maximum integer in " + a + ", " + b + ", " + c + " is " + maxInt);
 		log.info("The maximum float in "+d+", "+e+", "+f+" is "+maxFloat);
+		log.info("The maximum string in "+g+", "+h+", "+i+" is "+maxString);
 	}
 }
