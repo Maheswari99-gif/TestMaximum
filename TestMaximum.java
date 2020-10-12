@@ -26,13 +26,16 @@ public class TestMaximum<T extends Comparable<T>> {
 		max = sortedList.get(sortedList.size() - 1);
 		return max;
 	}
+	public static <T> void printMax(List<T> values, T max) {
+		log.info("Maximum among the list is " + max);
+	}
 
 	public static void main(String[] args) {
 
 		Integer a = 500, b = 50, c = 5, d = 25;
-		log.info(new TestMaximum<Integer>(a, b, c, d).findMax());
+		new TestMaximum<Integer>(a, b, c, d).findMax();
 		String e = "5", f = "89", g = "225", h = "68";
-		log.info(new TestMaximum<String>(e, f, g, h).findMax());
+		new TestMaximum<String>(e, f, g, h).findMax();
 
 	}
 }
