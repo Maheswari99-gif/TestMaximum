@@ -7,7 +7,7 @@ public class TestMaximum {
 
 	private static final Logger log = LogManager.getLogger(TestMaximum.class);
 
-	public Integer toMax(Integer x, Integer y, Integer z) {
+	public Integer findMax(Integer x, Integer y, Integer z) {
 		Integer max = x;
 		if (y.compareTo(max) > 0)
 			max = y;
@@ -16,7 +16,7 @@ public class TestMaximum {
 
 		return max;
 	}
-	public Float toMax(Float x, Float y, Float z) {
+	public Float findMax(Float x, Float y, Float z) {
 		Float max = x;
 		if (y.compareTo(max) > 0)
 			max = y;
@@ -30,8 +30,8 @@ public class TestMaximum {
 		TestMaximum testMaximum = new TestMaximum();
 		Integer a = 40, b = 20, c = 25;
 		Float d=10.0f, e=15.f, f=31.f;
-		Integer maxInt = testMaximum.toMax(a, b, c);
-		Float maxFloat=testMaximum.toMax(d, e, f);
+		Integer maxInt = testMaximum.findMax(a, b, c);
+		Float maxFloat=testMaximum.findMax(d, e, f);
 		log.info("The maximum integer in " + a + ", " + b + ", " + c + " is " + maxInt);
 		log.info("The maximum float in "+d+", "+e+", "+f+" is "+maxFloat);
 	}
